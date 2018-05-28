@@ -24,10 +24,10 @@ class CompressClass{
 		  echo '&quot;Zip.zip&quot; ouvert<br/>';
 	  
 	  		// Ajout d’un fichier.
-	  		$this->zip->addFile('../assets/files/mcd.jpg');
+	  		// $this->zip->addFile('assets/files/mcd.jpg');
 	  
 	  		// Ajout direct.
-	  		$this->zip->addFromString('Fichier.txt', 'Je suis le contenu de Fichier.txt !');
+	  		$this->zip->addFromString('img.jpg', 'assets/files/mcd.jpg');
   
 			// Et on referme l'archive.
 			$this->zip->close();
