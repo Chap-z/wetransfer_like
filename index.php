@@ -1,30 +1,12 @@
 <?php
 
-// require('models/Compress.class.php');
-// $truc = new CompressClass();
+require('models/compress.class.php');
+require('models/mail.class.php');
+$truc = new CompressClass();
 
-// $truc-> compress();
+$truc-> compress('mcd.jpg');
 
-// $zip = new ZipArchive();
-// if ($zip->open('test.zip') === TRUE) 
-// {
-//     if($zip->open('Zip.zip', ZipArchive::CREATE) === true)
-// 	{
-//         $zip->addFile('assets/files/mcd.jpg', 'newname.txt');
-//         $zip->close();
-//         echo 'ok';
-//     }
-//     else 
-//     {
-//         echo 'échec';
-//     }
-// } 
+$mail = new MailSend();
 
-$zip = new ZipArchive;
-if ($zip->open('test.zip') === TRUE) {
-    $zip->addFile('assets/files/mcd.jpg');
-    $zip->close();
-    echo 'ok';
-} else {
-    echo 'échec';
-}
+$mail-> sendMail();
+
