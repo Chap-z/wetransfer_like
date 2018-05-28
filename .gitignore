@@ -1,3 +1,4 @@
-/vendor
+/vendor/
+/models/Bddmanager.php
 composer.json
 composer.lock
