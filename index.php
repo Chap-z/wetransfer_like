@@ -3,15 +3,6 @@
 require('models/compress.class.php');
 require('models/mail.class.php');
 
-$url = explode("/",$_SERVER['REQUEST_URI'],4);
-if (count($url)>3){
-    array_pop($url);
-}
-$path = implode("/", $url);
- echo($path); ///home/Charlotte/public_html
-
- //OK J'AI COMPRIS ///home/Charlotte/public_html
-
 if (isset($_GET['action'])){
      
     switch ($_GET['action']) { 
@@ -40,8 +31,6 @@ if (isset($_GET['action'])){
 
 }
 
-// $truc = new CompressClass();
-// $truc-> compress('mcd.jpg');
 // $mail = new MailSend();
 // $mail-> sendMail();
 
