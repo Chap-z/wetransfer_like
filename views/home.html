@@ -5,11 +5,15 @@
 
 {% block content %}
 
-<form action="/home">
-    <input type="text" placeholder="mail send"/>
-    <input type="text" placeholder="mail recep"/>
-    <input type="file"/>
-    <button type="submit">valider</button>
-</form>
+    <form action="loading" class="uploadpic" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="mail send"/>
+        <input type="text" placeholder="mail recep"/>
+        <a class="linkNav upload">
+        <label for="fileToUpload" class="btn">upload your image</label>
+        <input name="fileToUpload" id="fileToUpload" class="input-file" type="file">
+        </a>
+        <p id="save-file"></p>
+        <input type="submit" id="submit-picture" value="Go" name="submit" class="btn">
+    </form>
 
 {% endblock %}
