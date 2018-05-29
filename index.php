@@ -12,11 +12,11 @@ $path = implode("/", $url);
  echo($path);
 switch($path){
     
-    case "wetransfer_like/home" :
+    case "/wetransfer_like/home" :
         require('controllers/ctrl_home.php');
         break;
 
-    case "wetransfer_like/loading":
+    case "/wetransfer_like/loading":
         require("controllers/ctrl_loading.php");
         break;
 
