@@ -3,27 +3,40 @@
 
 require('models/compress.class.php');
 require('models/mail.class.php');
+// $url = $_SERVER['REQUEST_URI'];
+// $r = parse_url($url);
+// $endofurl = substr($r['path'], strrpos($r['path'], 'wetransfer_like/'));
+// echo($endofurl);
+// $url = explode("/",$_SERVER['REQUEST_URI'],0);
+// var_dump($url);
+// if (count($url)>3){
+//     array_pop($url);
+// }
+// $path = implode("/", $url);
+// echo($path);
 
-$url = explode("/",$_SERVER['REQUEST_URI'],4);
-if (count($url)>3){
-    array_pop($url);
-}
-$path = implode("/", $url);
- echo($path);
-switch($path){
+if (isset($_GET['action'])){
+
+    switch($_GET['action']){
     
-    case "/wetransfer_like/home" :
-        require('controllers/ctrl_home.php');
-        break;
+        case "home" :
+            require('controllers/ctrl_home.php');
+            break;
 
-    case "/wetransfer_like/loading":
-        require("controllers/ctrl_loading.php");
-        break;
+        case "loading":
+            require("controllers/ctrl_loading.php");
+            break;
 
-    default:
-        require_once('controllers/ctrl_home.php');
-        break;
+        default:
+            require_once('controllers/ctrl_home.php');
+            break;
+    }
 }
+else{
+    require_once('controllers/ctrl_home.php');
+}
+
+
 
 
 // if (isset($_GET['action'])){

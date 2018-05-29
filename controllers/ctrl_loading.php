@@ -1,8 +1,14 @@
 <?php
 
 $target_dir = "assets/files";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = basename($_FILES["fileToUpload"]["name"]);
 
-$name = basename($_FILES["fileToUpload"]["name"]);
+$path = $_FILES["fileToUpload"]['tmp_name'];
 
-echo($name);
+
+
+
+$truc = new CompressClass();
+$truc-> compress($path, $target_file);
+// $mail = new MailSend();
+// $mail-> sendMail();

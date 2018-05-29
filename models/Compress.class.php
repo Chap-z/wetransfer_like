@@ -12,7 +12,7 @@ class CompressClass{
 	// 	// $this->_table = 'me_link_meme_image';
 	// }
 
-	public function compress($filename){
+	public function compress($path, $filename){
 		// $req = $this->_db->prepare('INSERT INTO ' . $this->_table . ' (id_meme, id_image) VALUES (:id_meme, :id_image)');
 		// $req->bindParam(':id_meme', $idMeme);
 		// $req->bindParam(':id_image', $idImage);
@@ -24,7 +24,7 @@ class CompressClass{
 		  echo 'ok';
 	  
 	  		// Ajout d’un fichier.
-	  		$this->zip->addFile('assets/files/' . $filename, $filename);
+	  		$this->zip->addFile($path, $filename);
   
 			// Et on referme l'archive.
 			$this->zip->close();
