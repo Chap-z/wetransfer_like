@@ -10,3 +10,6 @@ var_dump($path);
 
 $truc = new CompressClass();
 $truc-> compress($path, $target_file);
+
+$fileToDB = new AddFile();
+$fileToDB->add();
