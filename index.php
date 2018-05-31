@@ -19,7 +19,7 @@ if (isset($_GET['action'])){
             break;
 
         default:
-            require_once('error.html');
+            require_once('controllers/ctrl_home.php');
             break;
     
     }

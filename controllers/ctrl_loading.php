@@ -13,4 +13,3 @@ $fileToDB = new AddFile();
 $fileToDB->add($zipPath);
 $id = $fileToDB->getId($zipPath);
 
-var_dump($id);
