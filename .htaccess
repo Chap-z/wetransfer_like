@@ -1,3 +1,4 @@
 RewriteEngine On   
 RewriteRule ^loading$ index.php [L,QSA]
 RewriteRule ^home$ controllers/ctrl_home.php [L,QSA]
+RewriteRule ^loading$ index.php?action=loading [L,QSA]

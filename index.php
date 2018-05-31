@@ -1,9 +1,10 @@
 <?php
 
-
 require('models/compress.class.php');
 require('models/mail.class.php');
+require('models/Bddmanager.php');
 
+<<<<<<< HEAD
 $url = explode("/",$_SERVER['REQUEST_URI'],4);
 if (count($url)>3){
     array_pop($url);
@@ -28,29 +29,32 @@ switch($path){
 
 
 // if (isset($_GET['action'])){
+=======
+if (isset($_GET['action'])){
+>>>>>>> c1093de8b7f043492438c2b1f7138b2ec18ea60b
      
-//     switch ($_GET['action']) { 
+    switch ($_GET['action']) { 
         
-//     //routeur
-//         //case 'affiche':
-//         //require_once('controleur/affiche.php');
-//         //break;
-//         case 'home':
-//         require_once('controllers/ctrl_home.php');
-//         // require_once('controllers/control_generator.php');
-//             echo 'coucou le grand';
-//         break;
-//         default:
-//         require_once('error.html');
+        case 'home':
+            require_once('controllers/ctrl_home.php');
+            // require_once('controllers/control_generator.php');
+            break;
+
+        case 'loading':
+            require_once('models/newFile.class.php');
+            require_once('controllers/ctrl_loading.php');
+            break;
+
+        default:
+            require_once('error.html');
+            break;
     
-//     }
-// } else {
-    // require_once('controllers/ctrl_home.php');
+    }
+} else {
+    require_once('controllers/ctrl_home.php');
 
-// }
+}
 
-// $truc = new CompressClass();
-// $truc-> compress('mcd.jpg');
 // $mail = new MailSend();
 // $mail-> sendMail();
 
