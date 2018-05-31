@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   {% block title %}{% endblock %}
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
@@ -12,36 +12,33 @@
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
+  <nav>
+    <div class="nav-wrapper">
 
-          <a href="wetransfer_like"> <img src="assets/icons/logo.png" width="40px" height="40px"/> </a>
-        </div>
-      </nav>
-    <main>
+      <a href="wetransfer_like">
+        <img src="assets/icons/logo.png" width="40px" height="40px" /> </a>
+    </div>
+  </nav>
+  <main>
 
-            {% block content %}
-            {% endblock %}
-
-            {% block message %}
-{% endblock %}
-
-{% block link %}
-{% endblock %}
+    {% block content %} {% endblock %} 
+    {% block message %} {% endblock %} 
+    {% block link %} {% endblock %}
 
 
-    </main>
-    <footer class="page-footer">
-          <div class="container">
-          © Charlotte, Tom, Mehdi, Jérémy
-          </div>
-        </div>
-      </footer>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      © Charlotte, Tom, Mehdi, Jérémy
+    </div>
+    </div>
+  </footer>
   </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 
 
 </body>
+
 </html>

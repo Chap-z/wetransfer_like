@@ -6,12 +6,11 @@
 
 {% block content %}
 
-    <form action="loading" class="uploadpic" method="post" enctype="multipart/form-data">
+    <form action="result" class="uploadpic" method="post" enctype="multipart/form-data">
         <input type="text" placeholder="mail send"/>
         <input type="text" placeholder="mail recep"/>
-        <input type="text" placeholder="Message"/>
         <a class="linkNav upload">
-        <label for="fileToUpload" class="btn">upload</label>
+        <label for="fileToUpload" class="btn">upload your image</label>
         <input name="fileToUpload" id="fileToUpload" class="input-file" type="file">
         </a>
         <p id="save-file"></p>
