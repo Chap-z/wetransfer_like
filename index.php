@@ -21,8 +21,9 @@ switch($path){
         break;
 
     default:
-        require_once('controllers/ctrl_home.php');
+        require_once('controllers/ctrl_loading.php');
         break;
+        
 }
 
 
