@@ -6,11 +6,9 @@ class CompressClass{
 		
 
 
-	public function compress($path, $filename){
+	public function compress($path, $filename, $name){
 		
 		$this->zip = new ZipArchive;
-		$random = md5(uniqid(rand(), true)); 
-		$name = 'wetransfer-like-'.$random.'.zip';
 
 		if($this->zip->open('assets/files/'.$name, ZipArchive::CREATE) === true)
 		{
@@ -26,6 +24,5 @@ class CompressClass{
 		  echo 'nope';
 	  		// Traitement des erreurs avec un switch(), par exemple.
 		}
-		return $name;
 	}
 }

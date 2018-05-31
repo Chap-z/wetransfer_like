@@ -3,13 +3,10 @@
 class Bddmanager
 {
     protected $bdd;
-    private $host = "127.0.0.1";
+    private $host = "localhost";
     private $login = "root";
-
-
     private $password = "";
  
-
     public function __construct()
     {
         $bdd = new PDO('mysql:host=' . $this->host . ';dbname=wetransfer_like;charset=utf8', $this->login, $this->password);
