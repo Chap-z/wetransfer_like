@@ -1,22 +1,23 @@
-{% extends "layout.html" %}
-
-{% block title %}
+{% extends "layout.html" %} {% block title %}
 <title>Home</title>
-{% endblock %}
+{% endblock %} {% block content %}
+<section class="container">
+    <div class="row">
+        <h1>Bienvenue sur WeTransfer_Like</h1>
+        <div class="col s4">
 
-{% block content %}
-
-    <form action="result" class="uploadpic" method="post" enctype="multipart/form-data">
-        <input type="text" placeholder="mail send" id="mail" onblur="verifMail(this)"/>
-        <input type="text" placeholder="mail recep" id="mail" onblur="verifMail(this)" />
-        <a class="linkNav upload">
-        <label for="fileToUpload" class="btn">upload your image</label>
-        <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file" required>
-        </a>
-        <p id="save-file"></p>
-        <input type="submit" id="validate" value="Go" name="submit" class="btn">
-    </form>
-    <h2 id='result'></h2>
-
-
+            <form action="result" class="uploadpic" method="post" enctype="multipart/form-data">
+                <input type="text" placeholder="mail send"/>
+                <input type="text" placeholder="mail recep"/>
+                <a class="linkNav upload">
+                    <label for="fileToUpload" class="btn">upload your image</label>
+                    <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file"/>
+                </a>
+                <p id="save-file"></p>
+                <input type="submit" id="validate" value="Go" name="submit" class="btn">
+            </form>
+            <p id='result'></p>
+        </div>
+    </div>
+</section>
 {% endblock %}
