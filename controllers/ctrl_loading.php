@@ -10,8 +10,8 @@ $loader = new Twig_Loader_Filesystem('views');
 
 if (isset($_POST['send']) && isset($_POST['recep']) ) {
 
-    $mailSend = $_POST['send'];
-    $mailRecep = $_POST['recep'];
+    $mailSend = htmlEntities($_POST['send']);
+    $mailRecep = htmlEntities($_POST['recep']);
 
     $sentMail = new GetMail();
     $sentMail -> get_mail_send($mailSend);
@@ -24,15 +24,16 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
     $path = $_FILES["fileToUpload"]["tmp_name"];
 
 
-    $file = new CompressClass();
-    $zipPath = $file -> compress($path, $target_file);
-
-    $fileToDB = new AddFile();
-    $fileToDB->add($zipPath);
-    $id = $fileToDB->getId($zipPath);
-
     
 
+    $fileToDB = new AddFile();
+    $name = $fileToDB->addFile();
+    echo($name);
+
+    $file = new CompressClass();
+    $zipPath = $file -> compress($path, $target_file, $name);
+
 }
+
 echo $twig->render('result.html', array('')); 
 
