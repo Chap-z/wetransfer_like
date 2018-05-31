@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block title %}
-<title></title>
+<title>Home</title>
 {% endblock %}
 
 {% block content %}
@@ -9,8 +9,9 @@
     <form action="loading" class="uploadpic" method="post" enctype="multipart/form-data">
         <input type="text" placeholder="mail send"/>
         <input type="text" placeholder="mail recep"/>
+        <input type="text" placeholder="Message"/>
         <a class="linkNav upload">
-        <label for="fileToUpload" class="btn">upload your image</label>
+        <label for="fileToUpload" class="btn">upload</label>
         <input name="fileToUpload" id="fileToUpload" class="input-file" type="file">
         </a>
         <p id="save-file"></p>
