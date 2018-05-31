@@ -7,11 +7,11 @@
 {% block content %}
 
     <form action="result" class="uploadpic" method="post" enctype="multipart/form-data">
-        <input type="text" placeholder="mail send" id="mail" onblur="verifMail(this)" / required/>
-        <input type="text" placeholder="mail recep" id="mail" onblur="verifMail(this)(f)" / required/>
+        <input type="text" placeholder="mail send" id="mail" onblur="verifMail(this)"/>
+        <input type="text" placeholder="mail recep" id="mail" onblur="verifMail(this)" />
         <a class="linkNav upload">
-        {# <label for="fileToUpload" class="btn">upload your image</label> #}
-        <input name="fileToUpload" id="fileToUpload" class="input-file" type="file"  required>
+        <label for="fileToUpload" class="btn">upload your image</label>
+        <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file" required>
         </a>
         <p id="save-file"></p>
         <input type="submit" id="validate" value="Go" name="submit" class="btn">
