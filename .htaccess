@@ -1,6 +1,2 @@
 RewriteEngine On   
-<<<<<<< HEAD
-=======
-
->>>>>>> 9a1df335a2e17f660b6d485019b6b7a66655636c
 RewriteRule ^loading$ index.php?action=loading [L,QSA]
