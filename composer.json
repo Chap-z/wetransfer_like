@@ -1,11 +1,4 @@
 {
-    "name": "root/wetransfer_like",
-    "authors": [
-        {
-            "name": "Martint033",
-            "email": "martint033@gmail.com"
-        }
-    ],
     "require": {
         "twig/twig": "^2.0"
     }

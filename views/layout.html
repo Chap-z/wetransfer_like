@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
   {% block title %}{% endblock %}
 
-    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/styles/main.css">
 
 </head>
 
 <body>
-    <main>
-            {% block content %}
-            {% endblock %}
+  <nav>
+    <div class="nav-wrapper">
 
-    </main>
-    <footer>
+      <a href="wetransfer_like">
+        <img src="assets/icons/logo.png" width="40px" height="40px" /> </a>
+    </div>
+  </nav>
+  <main>
 
-    </footer>
+    {% block content %} {% endblock %} 
+    {% block message %} {% endblock %} 
+    {% block link %} {% endblock %}
+
+
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      © Charlotte, Tom, Mehdi, Jérémy
+    </div>
+    </div>
+  </footer>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-    {# Ajoutez ces lignes JavaScript si vous comptez vous servir des fonctionnalités du bootstrap Twitter #}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
 </body>
+
 </html>
