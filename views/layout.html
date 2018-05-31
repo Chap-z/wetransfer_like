@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   {% block title %}{% endblock %}
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link rel="stylesheet" href="assets/styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
 </head>
 
@@ -15,6 +15,7 @@
   <nav>
     <div class="nav-wrapper">
 
+<<<<<<< HEAD
       <a href="wetransfer_like">
         <img src="assets/icons/logo.png" width="65px" height="65px" /> </a>
     </div>
@@ -23,6 +24,16 @@
     <img class="background-image" src="assets/icons/bk.jpg" width="" height="" />
     {% block content %} {% endblock %} 
     {% block message %} {% endblock %} 
+=======
+      <a href="home">
+        <img src="assets/icons/logo.png" width="40px" height="40px" /> </a>
+    </div>
+  </nav>
+  <main>
+
+    {% block content %} {% endblock %}
+    {% block message %} {% endblock %}
+>>>>>>> 43a40045ff4311076804efa530d535b12f5082d4
     {% block link %} {% endblock %}
 
 
@@ -36,7 +47,8 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
+<script> src="assets/js/main.js"</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
 </body>
