@@ -13,9 +13,14 @@ if (isset($_GET['action'])){
             // require_once('controllers/control_generator.php');
             break;
 
-        case 'loading':
+        case 'result':
             require_once('models/newFile.class.php');
             require_once('controllers/ctrl_loading.php');
+            break;
+
+        case 'download':
+            require_once('');
+            require_once('controllers/ctrl_download.php');
             break;
 
         default:
