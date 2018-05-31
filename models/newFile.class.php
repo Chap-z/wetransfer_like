@@ -44,7 +44,6 @@ class AddFile{
         $name = $this->add();
         $id = $this->getId($name);
         $name = $this->addName($name, $id);
-        echo($name);
         return $name;
     }
 }
