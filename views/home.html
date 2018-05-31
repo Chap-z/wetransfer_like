@@ -7,8 +7,8 @@
 {% block content %}
 
     <form action="result" class="uploadpic" method="post" enctype="multipart/form-data">
-        <input type="email" placeholder="mail send"/>
-        <input type="email" placeholder="mail recep"/>
+        <input type="email" name="send" placeholder="mail send"/>
+        <input type="email" name="recep" placeholder="mail recep"/>
         <a class="linkNav upload">
         <label for="fileToUpload" class="btn">upload your image</label>
         <input name="fileToUpload" id="fileToUpload" class="input-file" type="file">

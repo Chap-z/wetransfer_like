@@ -7,18 +7,32 @@ $loader = new Twig_Loader_Filesystem('views');
  ]); 
 
 
-$target_dir = "wetranfer_like_";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
-$path = $_FILES["fileToUpload"]["tmp_name"];
+if (isset($_POST['send']) && isset($_POST['recep']) ) {
+
+    $mailSend = $_POST['send'];
+    $mailRecep = $_POST['recep'];
+
+    $sentMail = new GetMail();
+    $sentMail -> get_mail_send($mailSend);
+    $sentMail -> get_mail_recep($mailRecep);
 
 
-$file = new CompressClass();
-$zipPath = $file -> compress($path, $target_file);
+    $target_dir = "wetranfer_like_";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
-$fileToDB = new AddFile();
-$fileToDB->add($zipPath);
-$id = $fileToDB->getId($zipPath);
+    $path = $_FILES["fileToUpload"]["tmp_name"];
 
+
+    $file = new CompressClass();
+    $zipPath = $file -> compress($path, $target_file);
+
+    $fileToDB = new AddFile();
+    $fileToDB->add($zipPath);
+    $id = $fileToDB->getId($zipPath);
+
+    
+
+}
 echo $twig->render('result.html', array('')); 
 
