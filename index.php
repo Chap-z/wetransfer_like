@@ -5,9 +5,9 @@ require('models/mail.class.php');
 require('models/Bddmanager.php');
 
 if (isset($_GET['action'])){
-     
-    switch ($_GET['action']) { 
-        
+
+    switch ($_GET['action']) {
+
         case 'home':
             require_once('controllers/ctrl_home.php');
             // require_once('controllers/control_generator.php');
@@ -26,7 +26,7 @@ if (isset($_GET['action'])){
         default:
             require_once('controllers/ctrl_home.php');
             break;
-    
+
     }
 } else {
     require_once('controllers/ctrl_home.php');

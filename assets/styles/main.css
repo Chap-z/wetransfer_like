@@ -1,0 +1,45 @@
+input:invalid{
+    border-color: #900 !important;
+    background-color: #FDD !important;
+  }
+
+  input:focus:invalid {
+    outline: none !important;
+  }
+
+  form {
+    max-width: 200px;
+  }
+
+  input.mail {
+    -webkit-appearance: none;
+
+    width: 100%;
+    border: 1px solid #333;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 90%;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+
+  /* Voici la mise en forme pour les erreurs */
+  .error {
+    width  : 100% !important;
+    padding: 0 !important;
+
+    font-size: 80%!important;
+    color: white !important;
+    background-color: #900 !important;
+    border-radius: 0 0 5px 5px !important;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .error.active {
+    padding: 0.3em;
+  }
