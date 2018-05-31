@@ -10,8 +10,8 @@ $loader = new Twig_Loader_Filesystem('views');
 
 if (isset($_POST['send']) && isset($_POST['recep']) ) {
 
-    $mailSend = $_POST['send'];
-    $mailRecep = $_POST['recep'];
+    $mailSend = htmlEntities($_POST['send']);
+    $mailRecep = htmlEntities($_POST['recep']);
 
     $sentMail = new GetMail();
     $sentMail -> get_mail_send($mailSend);
