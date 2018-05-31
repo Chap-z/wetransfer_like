@@ -15,6 +15,7 @@ if (isset($_GET['action'])){
 
         case 'result':
             require_once('models/newFile.class.php');
+            require_once('models/getMail.class.php');
             require_once('controllers/ctrl_loading.php');
             break;
 
