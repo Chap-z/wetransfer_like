@@ -7,16 +7,16 @@
         <div class="col s4">
 
             <form action="result" class="uploadpic" method="post" enctype="multipart/form-data">
-                <input type="text" placeholder="mail send"/>
-                <input type="text" placeholder="mail recep"/>
+                <input type="email" name="send" placeholder="mail send"/>
+                <input type="email" name="recep" placeholder="mail recep"/>
                 <a class="linkNav upload">
                     <label for="fileToUpload" class="btn">upload your image</label>
                     <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file"/>
                 </a>
                 <p id="save-file"></p>
-                <input type="submit" id="validate" value="Go" name="submit" class="btn">
+                <input type="submit" id="submit-picture" value="Go" name="submit" class="btn">
             </form>
-            <p id='result'></p>
+            <!-- <p id='result'></p> -->
         </div>
     </div>
 </section>

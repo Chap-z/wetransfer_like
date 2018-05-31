@@ -5,5 +5,3 @@ RewriteRule ^home$ index.php?action=home [L,QSA]
 RewriteRule ^result$ index.php?action=result [L,QSA]
 
 RewriteRule ^download$ index.php?action=download [L,QSA]
-
-RewriteRule ^result$ index.php?action=result [L,QSA]
