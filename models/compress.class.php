@@ -18,11 +18,10 @@ class CompressClass{
 		// $req->bindParam(':id_image', $idImage);
 		// $req->execute();
 		$this->zip = new ZipArchive; 
-		$path = 'test.zip';
+		$name = 'test.zip';
 
-		if($this->zip->open('assets/files/'.$path, ZipArchive::CREATE) === true)
+		if($this->zip->open('assets/files/'.$name, ZipArchive::CREATE) === true)
 		{
-		  echo 'ok';
 	  
 	  		// Ajout d’un fichier.
 	  		$this->zip->addFile($path, $filename);

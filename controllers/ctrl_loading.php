@@ -5,8 +5,6 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
 $path = $_FILES["fileToUpload"]["tmp_name"];
 
-var_dump($target_file);
-var_dump($path);
 
 $file = new CompressClass();
 $zipPath = $file -> compress($path, $target_file);
