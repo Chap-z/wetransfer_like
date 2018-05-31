@@ -18,8 +18,9 @@ class CompressClass{
 		// $req->bindParam(':id_image', $idImage);
 		// $req->execute();
 		$this->zip = new ZipArchive; 
+		$path = 'test.zip';
 
-		if($this->zip->open('assets/files/test.zip', ZipArchive::CREATE) === true)
+		if($this->zip->open('assets/files/'.$path, ZipArchive::CREATE) === true)
 		{
 		  echo 'ok';
 	  
@@ -34,5 +35,6 @@ class CompressClass{
 		  echo 'nope';
 	  		// Traitement des erreurs avec un switch(), par exemple.
 		}
+		return $path;
 	}
 }

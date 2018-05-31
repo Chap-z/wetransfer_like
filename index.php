@@ -2,6 +2,7 @@
 
 require('models/compress.class.php');
 require('models/mail.class.php');
+require('models/Bddmanager.php');
 
 if (isset($_GET['action'])){
      
