@@ -1,5 +1,5 @@
 <?php
-class CompressClass{
+class GetMail{
 
 	protected $_db;
 	protected $zip; 
@@ -12,29 +12,11 @@ class CompressClass{
 	// 	// $this->_table = 'me_link_meme_image';
 	// }
 
-	public function compress($path, $filename){
+	public function get_mail(){
 		// $req = $this->_db->prepare('INSERT INTO ' . $this->_table . ' (id_meme, id_image) VALUES (:id_meme, :id_image)');
 		// $req->bindParam(':id_meme', $idMeme);
 		// $req->bindParam(':id_image', $idImage);
 		// $req->execute();
-		$this->zip = new ZipArchive; 
-		$path = 'test.zip';
 
-		if($this->zip->open('assets/files/'.$path, ZipArchive::CREATE) === true)
-		{
-		  echo 'ok';
-	  
-	  		// Ajout d’un fichier.
-	  		$this->zip->addFile($path, $filename);
-  
-			// Et on referme l'archive.
-			$this->zip->close();
-		}
-		else
-		{
-		  echo 'nope';
-	  		// Traitement des erreurs avec un switch(), par exemple.
-		}
-		return $path;
 	}
 }

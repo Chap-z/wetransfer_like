@@ -14,7 +14,7 @@ class AddFile{
 
 	public function add($name){
 
-
+        
 		$req = $this->db->prepare('INSERT INTO file(url, date) VALUES (:name,CURRENT_DATE)');
         $req->bindParam(':name', $name);
 		$req->execute();

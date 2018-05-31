@@ -4,34 +4,7 @@ require('models/compress.class.php');
 require('models/mail.class.php');
 require('models/Bddmanager.php');
 
-<<<<<<< HEAD
-$url = explode("/",$_SERVER['REQUEST_URI'],4);
-if (count($url)>3){
-    array_pop($url);
-}
-$path = implode("/", $url);
- echo($path);
-switch($path){
-    
-    case "/wetransfer_like/home" :
-        require('controllers/ctrl_home.php');
-        break;
-
-    case "/wetransfer_like/loading":
-        require("controllers/ctrl_loading.php");
-        break;
-
-    default:
-        require_once('controllers/ctrl_loading.php');
-        break;
-        
-}
-
-
-// if (isset($_GET['action'])){
-=======
 if (isset($_GET['action'])){
->>>>>>> c1093de8b7f043492438c2b1f7138b2ec18ea60b
      
     switch ($_GET['action']) { 
         
@@ -46,7 +19,7 @@ if (isset($_GET['action'])){
             break;
 
         default:
-            require_once('error.html');
+            require_once('controllers/ctrl_home.php');
             break;
     
     }
