@@ -25,6 +25,9 @@
     box-sizing: border-box;
   }
 
+form {
+  max-width: 200px;
+}
 
   /* Voici la mise en forme pour les erreurs */
   /* .error {
@@ -36,9 +39,9 @@
     background-color: #900;
     border-radius: 0 0 5px 5px;
 
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+.error.active {
+  padding: 0.3em;
+}
 
   .error.active {
     padding: 0.3em;
@@ -46,3 +49,5 @@
 .hidden{
     visibility : hidden;
 }
+
+/*# sourceMappingURL=assets/styles/main.css.map */
