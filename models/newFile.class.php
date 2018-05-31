@@ -12,18 +12,22 @@ class AddFile{
 	//  $this->_table = 'me_link_meme_image';
 	}
 
-	public function add($name){  
-		$req = $this->db->prepare('INSERT INTO file(url, date) VALUES (:name,CURRENT_DATE)');
-        $req->bindParam(":name", $name);
-        $req->execute(); 
-    }
+	public function add($name){
 
-    public function addName($name){
-        $req = $this->db->prepare('SELECT file.id FROM file WHERE file.url=:name');
-        $req->bindParam(":name", $name);
+
+		$req = $this->db->prepare('INSERT INTO file(url, date) VALUES (:name,CURRENT_DATE)');
+        $req->bindParam(':name', $name);
+		$req->execute();
+        
+
+    }
+    
+    public function getId($name){
+
+        $req = $this->db->prepare('SELECT file.id  FROM file WHERE file.url = :name');
+        $req->bindParam(':name', $name);
+
         $req->execute();
-        return $req->fetch(PDO::FETCH_ASSOC);
-        // var_dump($req);
-        // $name = md5(uniqid(rand(), true)).$req;
+        return $req->fetch(PDO::FETCH_ASSOC);       
     }
 }
