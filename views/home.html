@@ -1,22 +1,23 @@
 {% extends "layout.html" %} {% block title %}
 <title>Home</title>
 {% endblock %} {% block content %}
-<section class="container">
-    <div class="row">
-        <h1>Bienvenue sur WeTransfer_Like</h1>
-        <div class="col s4">
-
+<section class="wrap-home container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h1>Bienvenue sur Wetransfer Like</h1>
+        </div>
+        <div class="col-12 col-sm-4 ">
+            <p>Merci de remplir les informations ci-dessous pour transmettre votre fichier</p>
             <form action="result" class="uploadpic" method="post" enctype="multipart/form-data" onsubmit="return valider ();">
-                <input type="email" name="send" placeholder="mail send"/>
-                <input type="email" name="recep" placeholder="mail recep"/>
-                <a class="linkNav upload">
-                    <label for="fileToUpload" class="btn">upload your image</label>
-                    <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file"/>
-                </a>
-                <p id="save-file"></p>
-                <input type="submit" id="submit-picture" value="Go" name="submit" class="btn">
+                <input type="email" name="send" placeholder="mail send" class="input-mail"/>
+                <input type="email" name="recep" placeholder="mail recep" class="input-mail"/>
+                <div class="upload">
+                    <label for="fileToUpload" class="btn-upload">upload your image</label>
+                    <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file" />
+                </div>
+                <input type="submit" id="submit-picture" value="Go" name="submit" class="btn-submit">
             </form>
-            <p id='error-mail'></p> 
+            <p id='error-mail'></p>
         </div>
     </div>
 </section>
