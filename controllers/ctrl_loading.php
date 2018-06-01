@@ -24,6 +24,6 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
     $file = new CompressClass();
     $zipPath = $file -> compress($path, $target_file, $name);
 
-    // $url = ["url"=>"assets/files/".$name];
-    echo $twig->render('result.html', array("")); 
+    $url = ["url"=>"assets/files/".$name];
+    echo $twig->render('result.html', array("url"=>$url)); 
 }
