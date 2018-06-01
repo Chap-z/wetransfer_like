@@ -1,3 +1,45 @@
-.hidden {
-    visibility: hidden;
+.wrap-home {
+    h1 {
+        font-size: 25px;
+        color: $dark-grey;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 30px auto;
+    }
+    p {
+        font-size: 15px;
+        color: $dark-grey;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 30px;
+    }
+    .uploadpic {
+        .input-mail {
+            border: none;
+            border-bottom: 2px solid $blue-green;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 20px;
+        }
+        .upload {
+            .btn-upload {
+                width: 100%;
+                background-color: $blue-green;
+                padding: 7px 15px;
+                color: $white;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: $blue-green;
+            padding: 7px 15px;
+            color: $white;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+            border-radius: 20%;
+        }
+    }
+    .hidden {
+        visibility: hidden;
+    }
 }
