@@ -11,18 +11,12 @@ class MailSend{
 	// 	// $this->_table = 'me_link_meme_image';
 	// }
 
-	public function sendMail(){
-		// $req = $this->_db->prepare('INSERT INTO ' . $this->_table . ' (id_meme, id_image) VALUES (:id_meme, :id_image)');
-		// $req->bindParam(':id_meme', $idMeme);
-		// $req->bindParam(':id_image', $idImage);
-        // $req->execute();
-        
-		$Name = "Da DuderDi"; //senders name 
-        $email = "email@adress.com"; //senders e-mail adress 
+	public function sendMail($sender, $recipient, $file){
+		
         $recipient = "martint033@gmail.com"; //recipient 
-        $mail_body = "Clou"; //mail body 
+        $mail_body = "Bonjour un ami vous à envoyer des fichiers sur wetransfer_like.\n Vous pouvez les récuperer sur le lien suivant : https://tomm.promo-17.codeur.online/wetransfer_like/download/".$file; //mail body 
         $subject = "Coucou"; //subject 
-        $header = "From: ". $Name . " <" . $email . ">\r\n"; //optional headerfields 
+        $header = "From:  <" . $sender . ">\r\n"; //optional headerfields 
 
         mail($recipient, $subject, $mail_body, $header); //mail command :) 
     }

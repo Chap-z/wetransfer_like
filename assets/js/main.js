@@ -38,3 +38,29 @@
 //         return false;
 //     }
 // }
+
+
+// var form = document.getElementById('the-form');
+// form.addEventListener( "submit", function(e) {
+//     e.preventDefault();
+//     var formData = new FormData(form);
+
+//     formData.append('file', file);
+
+//     var xhr = new XMLHttpRequest();
+//     // Add any event handlers here...
+//     xhr.open('POST', form.getAttribute('action'), true);
+//     xhr.send(formData);
+
+//     return false; // To avoid actual submission of the form
+// });
+
+
+$(document).ready(function(){ 
+    (function(){ 
+        var i = 0; 
+        setInterval(function(){ 
+            $('#background').removeClass("bg1, bg2, bg3, bg4").addClass("bg"+(i++%4 + 1)); 
+        }, 10000); 
+    })(); 
+});

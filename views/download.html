@@ -1,10 +1,17 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
 
 {% block title %}
-<title>Download</title>
-{% endblock %}
-
+<title>Télécharger mon fichier - WeTransfer Like</title>
+{% endblock %} 
 {% block content %}
-    <a href="../{{ url }}">download your file</a>
-
+<section class="wrap-download container">
+    <div class="row">
+        <div class="wrap-content col-sm-4">
+            <h1>Récupérer mon fichier</h1>
+            <p>On vous a envoyé un fichier.</p>
+            <p class="p-dl">Voici le lien de téléchargement :</p>
+            <a class="btn-submit" href="localhost/wetransfer_like/download/{{ url }}">Télécharger</a>
+        </div>
+    </div>
+</section>
 {% endblock %}
