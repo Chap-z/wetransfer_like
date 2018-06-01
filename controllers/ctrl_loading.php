@@ -20,9 +20,13 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
 
     $fileToDB = new AddFile();
     $name = $fileToDB->addFile();
-
+    
     $file = new CompressClass();
     $zipPath = $file -> compress($path, $target_file, $name);
+    
+    $urlName = explode(".zip", $name);
+    // $mail = new MailSend();
+    // $mail->sendMail($mailSend, $mailRecep, $urlName[0]);
 
     // $url = ["url"=>"assets/files/".$name];
     echo $twig->render('result.html', array("")); 

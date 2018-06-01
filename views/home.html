@@ -1,23 +1,30 @@
-{% extends "layout.html" %} {% block title %}
+{% extends "layout.html" %} 
+{% block title %}
 <title>Home</title>
-{% endblock %} {% block content %}
+{% endblock %} 
+{% block content %}
 <section class="container">
     <div class="row">
         <h1>Bienvenue sur WeTransfer_Like</h1>
         <div class="col s4">
 
-            <form action="result" class="uploadpic" method="post" enctype="multipart/form-data" onsubmit="return valider ();">
+            <form action="result" id="the-form" class="uploadpic" method="post" enctype="multipart/form-data">
                 <input type="email" name="send" placeholder="mail send"/>
                 <input type="email" name="recep" placeholder="mail recep"/>
                 <a class="linkNav upload">
                     <label for="fileToUpload" class="btn">upload your image</label>
                     <input name="fileToUpload" id="fileToUpload" class="input-file hidden" type="file"/>
                 </a>
-                <p id="save-file"></p>
+                <progress value="0" max="100" for="fileToUpload"></progress>
                 <input type="submit" id="submit-picture" value="Go" name="submit" class="btn">
             </form>
+            
             <p id='error-mail'></p> 
         </div>
     </div>
 </section>
 {% endblock %}
+
+{% block script %}
+    <script src="assets/js/main.js"></script>
+{% endblock script %}
