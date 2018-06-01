@@ -1,19 +1,24 @@
+html {
+  background: url("../styles/icons/bk.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  position: relative;
+}
+
 .nav-wrapper {
   background-color: #26A69A;
-  position: relative;
+  position: fixed;
 }
 
 .page-footer {
   background-color: #26A69A;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
   position: fixed;
+  width: 100%;
 }
 
 /*# sourceMappingURL=assets/styles/main.css.map */
