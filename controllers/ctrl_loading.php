@@ -29,5 +29,5 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
     // $mail->sendMail($mailSend, $mailRecep, $urlName[0]);
 
     $url = ["url"=>"assets/files/".$name];
-    echo $twig->render('result.html', array("url"=>$url)); 
+    echo $twig->render('result.html', array("url"=>$urlName[0])); 
 }
