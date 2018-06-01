@@ -1,13 +1,9 @@
 <?php
-
 require_once ('vendor/autoload.php');
 $loader = new Twig_Loader_Filesystem('views');
  $twig = new Twig_Environment($loader,[
      'cache' => false,
  ]); 
-
-
-
 if (isset($_POST['send']) && isset($_POST['recep']) ) {
 
     $mailSend = htmlEntities($_POST['send']);
@@ -16,7 +12,6 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
     $sentMail = new GetMail();
     $sentMail -> get_mail_send($mailSend);
     $sentMail -> get_mail_recep($mailRecep);
-
 
     $target_dir = "wetranfer_like_";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -29,7 +24,6 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
     $file = new CompressClass();
     $zipPath = $file -> compress($path, $target_file, $name);
 
+    // $url = ["url"=>"assets/files/".$name];
+    echo $twig->render('result.html', array("")); 
 }
-
-echo $twig->render('result.html', array('')); 
-

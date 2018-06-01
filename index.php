@@ -20,7 +20,6 @@ if (isset($_GET['action'])){
             break;
 
         case 'download':
-            require_once('');
             require_once('controllers/ctrl_download.php');
             break;
 
