@@ -1,6 +1,6 @@
 function _(el) {
     return document.getElementById(el);
-  }
+}
   
 function uploadFile() {
     var file = _("fileToUpload").files[0];
@@ -45,4 +45,4 @@ $(document).ready(function(){
     setInterval(function(){ 
     $('#background').removeClass("bg1, bg2, bg3, bg4").addClass("bg"+(i++%4 + 1)); 
     }, 10000); 
-    });
+});

@@ -13,7 +13,11 @@
                 <div class="upload">
                     <label for="fileToUpload" class="btn-upload">Ajoutez un fichier</label>
                     <input name="fileToUpload" value="fileToUpload" id="fileToUpload" class="input-file hidden" type="file" onchange="uploadFile()"/>
-                    <progress id="progressBar" value="0" max="100"></progress>
+                    {# <div class="progress">
+                        <div id="progressBar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"> #}
+                    <progress id="progressBar" value="0" min="0" max="100"></progress>
+                        {# </div>
+                    </div> #}
                     <h3 id="status"></h3>
                     <p id='loaded_n_total'></p>
                 </div>
