@@ -36,3 +36,13 @@ function errorHandler(event) {
 function abortHandler(event) {
     _("status").innerHTML = "Upload Aborted";
 }
+
+
+
+
+$(document).ready(function(){ 
+    var i = 0; 
+    setInterval(function(){ 
+    $('#background').removeClass("bg1, bg2, bg3, bg4").addClass("bg"+(i++%4 + 1)); 
+    }, 10000); 
+    });
