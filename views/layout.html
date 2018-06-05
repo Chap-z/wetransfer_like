@@ -8,15 +8,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+    <link rel="icon" href="assets/medias/logo.png" type="image/png" />
   <link rel="stylesheet" href="assets\styles\main.css"> {% block title %}{% endblock %}
 </head>
 
 <body>
-  <div class="background-image">
+  <div id="background" class="background-image">
     <header>
       <div class="wrap-logo">
         <a href="home">
-          <img src="assets/icons/logo.png" />
+          <img src="assets/medias/logo.png" />
           <p>Wetransfer Like</p>
         </a>
       </div>
@@ -34,7 +35,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   
-  {% block script %} {% endblock script %}
+
   
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -43,8 +44,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
-
+  {% block script %} {% endblock script %}
 </body>
 
 </html>
