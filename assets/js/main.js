@@ -1,56 +1,38 @@
-// function validateEmail(email) {
-//     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(email);
-//   }
-
-//   function validate() {
-//     var $result = $("#result");
-//     var email = $("#email").val();
-//     $result.text("");
-
-//     if (validateEmail(email)) {
-//       $result.text(email + " is valid :)");
-//       $result.css("color", "green");
-//     } else {
-//       $result.text(email + " is not valid :(");
-//       $result.css("color", "red");
-//     }
-//     return false;
-//   }
-
-//   $("#validate").bind("click", validate);
-
-// function checkMail(emailAdress)
-
-// {
-//     var reg = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
-
-//     return (reg.test(emailAdress));
-// }
-
-// function valider() {
-
-//     if (!checkMail(document.form.send.value) || (document.form.send.value.length == 0)) {
-//         document.getElementById('error-mail').innerHTML = "Merci de renseigner votre email.";
-//         return false;
-//     } else if (!checkMail(document.form.recep.value) || (document.form.recep.value.length == 0)) {
-//         document.getElementById('error-mail').innerHTML = "Merci de renseigner le mail du destinataire.";
-//         return false;
-//     }
-// }
-
-
-var form = document.getElementById('the-form');
-form.addEventListener( "submit", function(e) {
-    e.preventDefault();
-    var formData = new FormData(form);
-
-    formData.append('file', file);
-
-    var xhr = new XMLHttpRequest();
-    // Add any event handlers here...
-    xhr.open('POST', form.getAttribute('action'), true);
-    xhr.send(formData);
-
-    return false; // To avoid actual submission of the form
-});
+function _(el) {
+    return document.getElementById(el);
+  }
+  
+function uploadFile() {
+    var file = _("fileToUpload").files[0];
+    // alert(file.name+" | "+file.size+" | "+file.type);
+    var formdata = new FormData();
+    formdata.append("fileToUpload", file);
+    var ajax = new XMLHttpRequest();
+    ajax.upload.addEventListener("progress", progressHandler, false);
+    ajax.addEventListener("load", completeHandler, false);
+    ajax.addEventListener("error", errorHandler, false);
+    ajax.addEventListener("abort", abortHandler, false);
+    ajax.open("POST", "result", true); // http://www.developphp.com/video/JavaScript/File-Upload-Progress-Bar-Meter-Tutorial-Ajax-PHP
+    //use file_upload_parser.php from above url
+    ajax.send(formdata);
+}
+  
+function progressHandler(event) {
+    _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+    var percent = (event.loaded / event.total) * 100;
+    _("progressBar").value = Math.round(percent);
+    _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+}
+  
+function completeHandler(event) {
+    _("status").innerHTML = event.target.responseText;
+    _("progressBar").value = 100; //wil clear progress bar after successful upload
+}
+  
+function errorHandler(event) {
+    _("status").innerHTML = "Upload Failed";
+}
+  
+function abortHandler(event) {
+    _("status").innerHTML = "Upload Aborted";
+}
