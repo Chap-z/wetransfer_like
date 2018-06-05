@@ -1,3 +1,23 @@
+var inpSend = document.getElementById('send');
+var inpRecep = document.getElementById('recep');
+var inpFile = document.getElementById('fileToUpload');
+
+document.getElementById('submit-picture').addEventListener('click', function (e){
+    if (inpSend.value <= 3){
+        e.preventDefault();
+        _("loaded_n_total").innerHTML = "Merci d'indiquer l'e-mail de l'envoyeur";
+    }
+    else if (inpRecep.value <= 3) {
+        e.preventDefault();
+        _("loaded_n_total").innerHTML = "Merci d'indiquer l'e-mail du destinataire";
+    }
+    else if (!inpFile.files[0]){
+        e.preventDefault();
+        _("loaded_n_total").innerHTML = "Merci de sélectionner un fichier";
+    } 
+});
+
+
 function _(el) {
     return document.getElementById(el);
 }
