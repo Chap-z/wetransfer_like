@@ -36,7 +36,3 @@ if (isset($_POST['send']) && isset($_POST['recep']) ) {
         echo $twig->render('result.html', array("url"=>$urlName[0]));  
     
 }
-
-else {
-    echo $twig->render('home.html', array();
-}

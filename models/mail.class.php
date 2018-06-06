@@ -12,6 +12,8 @@ class MailSend{
 	// }
 
 	public function sendMail($sender, $recipient, $file){
+		$passage_ligne = "\n";
+		$boundary = "-----=".md5(rand());
 		
         $recipient = "martint033@gmail.com"; //recipient 
 		$mail_body = '<html><body>';
@@ -24,7 +26,11 @@ class MailSend{
 		$mail_body .= '</table>';
 		$mail_body .= "</body></html>";
         $subject = "Coucou"; //subject 
-        $header = "From:  <" . $sender . ">\r\n"; //optional headerfields 
+		$header = "From:  <" . $sender . ">\r\n"; //optional headerfields 
+		$header = "From: \"WeaponsB\"<weaponsb@mail.fr>".$passage_ligne;
+		$header.= "Reply-to: \"WeaponsB\" <weaponsb@mail.fr>".$passage_ligne;
+		$header.= "MIME-Version: 1.0".$passage_ligne;
+		$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 
         mail($recipient, $subject, $mail_body, $header); //mail command :) 
     }
